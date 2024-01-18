@@ -8,6 +8,7 @@ import SideBar from "@/components/sidebar";
 
 import { motion } from "framer-motion";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,23 @@ export default function RootLayout({
         {children}
         <SideBar />
       </body>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-N6E0WDV2Y5`}
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N6E0WDV2Y5', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
     </html>
   );
 }
