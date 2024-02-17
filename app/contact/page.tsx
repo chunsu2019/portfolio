@@ -5,11 +5,9 @@ import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
 
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
 import SubmitBtn from "@/components/submit-btn";
 
 export default function page() {
-  const { pending } = useFormStatus();
   return (
     <motion.section
       className="flex flex-col gap-6 mt-5 text-center w-[80%] text-[0.8rem] md:w-[70%] md:text-[1.2rem] lg:w-[50%] xl:w-[40%] xl:text-[1.3rem]"

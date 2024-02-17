@@ -40,7 +40,7 @@ export default function RootLayout({
       </body>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-N6E0WDV2Y5`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ASSIST_KEY}`}
       />
       <Script
         strategy="afterInteractive"
@@ -49,7 +49,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-N6E0WDV2Y5', {
+            gtag('config', '${process.env.GOOGLE_ASSIST_KEY}', {
               page_path: window.location.pathname,
             });
           `,

@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+// @ts-expect-error
+import { useFormStatus } from "react-dom";
 import { FaPaperPlane } from "react-icons/fa";
 
 const SubmitBtn = () => {
