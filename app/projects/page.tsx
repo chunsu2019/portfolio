@@ -14,11 +14,17 @@ const page = () => {
       <SectionHeading>Projects</SectionHeading>
       <div className="flex flex-wrap justify-center mt-11 gap-10">
         <ProjectCard
+          title="Edio"
+          description="An 8D audio extension that helps people with ADHD focus by turning active tabs into immersive, calming surround sound."
+          imgUrl="/edio.png"
+          siteUrl="https://chromewebstore.google.com/detail/edio/ccmioomaopnpgkgfioomdjnblmkfgpfk"
+        />
+        <ProjectCard
           title="Portfolio"
           description="Created my portfolio website using React, Next.js, and Tailwind CSS. Its hosted on AWS using Amplify."
           imgUrl="/portfolio.png"
-          githubUrl="https://chunyousu.com"
-          siteUrl="https://github.com/chunsu2019/portfolio"
+          githubUrl="https://github.com/chunsu2019/portfolio"
+          siteUrl="https://chunyousu.com"
         />
 
         <ProjectCard

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { BsGithub, BsLink, BsYoutube } from "react-icons/bs";
 import { inherits } from "util";
@@ -35,19 +34,23 @@ const ProjectCard = ({
           alt="Card Image"
           className="border-solid object-fill border-2 border-gray-500 rounded-sm h-[7rem] md:h-[9rem] lg:h-[10rem]"
         />
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute w-[50%] bg-gray-900 left-0 h-[7rem] opacity-0 hover:opacity-80 cursor-pointer md:h-[9rem] lg:h-[10rem]"
-        >
-          <BsGithub className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-5xl" />
-        </a>
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute w-[50%] bg-gray-900 left-0 h-[7rem] opacity-0 hover:opacity-80 cursor-pointer md:h-[9rem] lg:h-[10rem]"
+          >
+            <BsGithub className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-5xl" />
+          </a>
+        )}
         <a
           href={siteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute w-[50%] bg-gray-900 right-0 h-[7rem] opacity-0 hover:opacity-80 cursor-pointer md:h-[9rem] lg:h-[10rem]"
+          className={`${
+            githubUrl ? "absolute w-[50%]" : "absolute w-[100%]"
+          } bg-gray-900 right-0 h-[7rem] opacity-0 hover:opacity-80 cursor-pointer md:h-[9rem] lg:h-[10rem]`}
         >
           <BsLink className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-5xl" />
         </a>
